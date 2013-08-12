@@ -37,24 +37,26 @@ L = 35; %number of scales
 [KM,SegmentEnd] = MSS(V1,L);
 
 %% Enrichment computation
+clc
 Enrichment1 = SignificantFoldChange(SegmentEnd,V1,UM); %Enrichment taking into account mappability map
 Enrichment2 = SignificantFoldChange(SegmentEnd,V1); %No mappability map or other background signal
-Enrichment3 = SignificantFoldChange(SegmentEnd,V2,UM,V1); %V2 versus V1
+Enrichment3 = SignificantFoldChange(SegmentEnd,V2,UM,V1); %V2 versus V1 with mappability map
+Enrichment4 = SignificantFoldChange(SegmentEnd,V2,[],V1); %V2 versus V1 without mappability map
 
 %% Pruning
 Eth = 0;
-T = 1.05;
-R = 0.1;
+T = 1.5;
+R = 0.2;
 KeepP = Prune(Enrichment1,KM,SegmentEnd,T,R,Eth);
 T = 1.05;
 R = 0;
 KeepA = Prune(Enrichment1,KM,SegmentEnd,T,R,Eth);
 
 %% Plotting
-x = [400000 500000];%range to plot
+x = [400000 600000];%range to plot
 Lmin = 5;
 Lmax = 30;
-plotMSS(x,Lmin,Lmax,V1,Enrichment1,KM,SegmentEnd);
+plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
 
 
 
