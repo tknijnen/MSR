@@ -14,6 +14,10 @@
 % 
 % You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% October 11 2013 : For backwards compatability with versions earlier than
+% R2009b, the unused argument (~) in the unique function was replaced by a
+% (TAK)
 
 
 function SegmentsFlag = Prune(Enrichment,KM,SegmentEnd,T,R,Eth)
@@ -33,10 +37,10 @@ for n = 1:L;
     Segments = cat(1,[1 SE(1:SL-1)+1],SE);
     SegmentsSI{n}(3,:) = diff(Segments,[],1)+1;
     if n>1;
-       [~,b,c] = unique(KM{n}(2,:),'first');
+       [a,b,c] = unique(KM{n}(2,:),'first');
        SegmentsSI{n}(1,:) = b;
        SegmentsSI{n-1}(4,:) = c;
-       [~,b] = unique(KM{n}(2,:),'last');
+       [a,b] = unique(KM{n}(2,:),'last');
        SegmentsSI{n}(2,:) = b;
     end
 end
