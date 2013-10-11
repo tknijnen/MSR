@@ -4,6 +4,24 @@ The MultiScale Representation (MSR) of Genomic Signals is collection of segmenta
 
 The code consists of four parts:
 
+1. The multiscale segmentation algorithm
+2. Computation of the SFC
+3. Pruning to detect relevant yet non-redundant segment in the MSR
+4. A plotting routine to visualize the MSR
+
+1. The multiscale segmentation algorithm
+-
+syntax : [KM,SegmentEnd] = MSS(V,L);
+inputs: V genomic signal
+        L the number of scales
+
+
+
+2. Computation of the SFC
+3. Pruning to detect relevant yet non-redundant segment in the MSR
+4. A plotting routine to visualize the MSR
+
+
 
 
 
