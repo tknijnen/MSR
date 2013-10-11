@@ -9,64 +9,50 @@ The code consists of four parts:
 3. Pruning to detect relevant yet non-redundant segment in the MSR
 4. A plotting routine to visualize the MSR
 
+These four parts are run with an example genomic signal in the main script: msr_example_script.m.
+Below we describe these four parts in more detail.
+
+
 1. The multiscale segmentation algorithm
--
-syntax : [KM,SegmentEnd] = MSS(V,L);
-inputs: V genomic signal
-        L the number of scales
-
-
+---
+```bash
+#create the multiscale segmentation using signal V1 and L scales
+[KM,SegmentEnd] = MSS(V1,L);
+#KM contains the hierarchy between segments and SegmentEnd contains the end positions of the segments
+```
 
 2. Computation of the SFC
+---
+```bash
+#Computation of the SFC taking into account mappability map
+Enrichment1 = SignificantFoldChange(SegmentEnd,V1,UM); 
+#Computation of the SFC without mappability map or other background signal
+Enrichment2 = SignificantFoldChange(SegmentEnd,V1); 
+#Computation of the SFC comparing V2 versus V1 without mappability map
+Enrichment3 = SignificantFoldChange(SegmentEnd,V2,UM,V1); 
+#Computation of the SFC comparing V2 versus V1 with mappability map
+Enrichment4 = SignificantFoldChange(SegmentEnd,V2,[],V1); 
+#Enrichmentx contains the SFC scores for all the segments
+```
+
 3. Pruning to detect relevant yet non-redundant segment in the MSR
-4. A plotting routine to visualize the MSR
-
-
-
-
-
-clear all;close all;clc;
-addpath(genpath(pwd));
-
-%% Path to fast convolution
-if ispc
-    addpath([pwd '\Win_CONVNFFT_Folder']);rmpath([pwd '\Unix_CONVNFFT_Folder']);
-elseif isunix
-    addpath([pwd '/Unix_CONVNFFT_Folder']);rmpath([pwd '/Win_CONVNFFT_Folder']);
-end
-
-%% Load genomic signals
-load ExampleGenomicSignals;
-%V1      RNA Polymerase II ChIP-seq signal of unstimulated murine bone marrow macrophage (BMM) on chromosome 1, 1Mb samples at 10bp resolution
-%V2      Same but for BMM after 2 hours of LPS stimulation
-%B       Control ChIP-Seq signal of BMMs with immunoglobulin G derived from rabbits that were not immunized with specific target antigens.
-%UM      Mappability landscape for ChIP-seq fragments (see paper) 
-
-%% Segmentation
-L = 35; %number of scales
-[KM,SegmentEnd] = MSS(V1,L);
-
-%% Enrichment computation
-clc
-Enrichment1 = SignificantFoldChange(SegmentEnd,V1,UM); %Enrichment taking into account mappability map
-Enrichment2 = SignificantFoldChange(SegmentEnd,V1); %No mappability map or other background signal
-Enrichment3 = SignificantFoldChange(SegmentEnd,V2,UM,V1); %V2 versus V1 with mappability map
-Enrichment4 = SignificantFoldChange(SegmentEnd,V2,[],V1); %V2 versus V1 without mappability map
-
-%% Pruning
-Eth = 0;
-T = 1.5;
-R = 0.2;
+--- 
+```bash
+#Pruning the multiscale representation with parameters R and T, and only keeping segment with SFC larger than Eth
 KeepP = Prune(Enrichment1,KM,SegmentEnd,T,R,Eth);
-T = 1.05;
-R = 0;
-KeepA = Prune(Enrichment1,KM,SegmentEnd,T,R,Eth);
+#KeepP contains binary values for all segments indicated whether they were kept (1) or pruned (0).
+```
+Additional information on the pruning:
+The segment is only kept (i.e. not pruned) when it has a score higher that all of its children and all of its parents. To be able to detect segments at different scales a size constraint is introduced: The segment under investigation is not compared to all its children and parents, but only to those children with segment lengths larger than S∙R and parents with length smaller than S/R. Here, S is the length of the segment under investigation and R is parameter between 0 and 1. The default setting for R is 0.2, which means that children 5 times smaller than the segment and parents 5 times larger than the segment are not considered. There is one exception: when all children at scales 1 to n-1 have a lower score than the segment under investigation, all children are pruned, also those smaller than S∙R. When R is 0, there is effectively no size constraint, i.e. the segment under investigation is compared to all its children and parents. In that case, a genomic position is part of at most one segment that is not pruned. 
+Further, a slack parameter, T, is introduced, which prevents higher-scale segments from breaking up into smaller ones. Specifically, it prevents segments from being pruned, because one of the children has a slightly better score. Specifically, the segment under investigation is kept (i.e. not pruned) when its score (denoted by X) multiplied by T, (i.e. X∙T) is larger than the scores of all its children, and its (unadjusted) score X is larger than the scores of all its parents. The default setting for T is 1.05.
 
-%% Plotting
-x = [400000 600000];%range to plot
-Lmin = 5;
-Lmax = 30;
+4. A plotting routine to visualize the MSR
+---
+```bash
+#Plotting the MSR for the genomic signal V1 in the range x from scale Lmin to Lmax using SFC scores from Enrichment2. The last argument can be empty or contain the pruning results (KeepP)
 plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
+```
+
 
 % Theo Knijnenburg
 % Institute for Systems Biology
