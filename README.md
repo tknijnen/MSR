@@ -11,7 +11,7 @@ Below we describe these components using the MATLAB msr_example_script.m. Additi
 
 
 ## msr_example_script.m
-[msr_example_script.m](../msr_example_script.m)
+[msr_example_script.m](../master/msr_example_script.m)
 
 The code consists of four parts:
 
