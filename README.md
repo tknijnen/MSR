@@ -61,7 +61,9 @@ plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
 ```
 
 ## msr_encodedatapipeline.m
-[msr_encodedatapipeline.m](../master/msr_encodedatapipeline)
+[msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m)
+
+This script takes a downloaded signal from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Pruning)
 
 
 
