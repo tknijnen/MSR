@@ -78,7 +78,11 @@ chr1	90172910	90173010	scale11	2.9788
 ## Matlab Compiler Runtimes
 [msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m) and [msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m)
 
-Insta
+Here, we provide Matlab Compiler Runtimes (MCR) for Unix (64bit) and Windows (64bit) that enable users to run the MSR application without installing MATLAB. To use these runtime components, first download  
+
+
+Use installation guide. a
+
 
 
 
