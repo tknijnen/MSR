@@ -7,7 +7,7 @@ There are two main components to create the MSR. The third component is optional
 2. Computating of the SFC
 3. Pruning to detect relevant yet non-redundant segment in the MSR
 
-Below we describe these components using the MATLAB msr_example_script.m. Additionally, we provide a script to create MSRs from ENCODE data and we provide Matlab Compiler Runtimes for Unix and Windows that enable users to run the MSR application without installing MATLAB. 
+Below we describe these components using the MATLAB msr_example_script.m. Additionally, we provide a script to create MSRs from ENCODE data and we provide Matlab Compiler Runtimes for Unix and Windows that enable users to run the MSR application without installing MATLAB. Note that depending on the size of the data and parameters settings computing the MSR can be computationally heavy.
 
 
 ## msr_example_script.m
@@ -59,6 +59,15 @@ Further, a slack parameter, T, is introduced, which prevents higher-scale segmen
 #Plotting the MSR for the genomic signal V1 in the range x from scale Lmin to Lmax using SFC scores from Enrichment2. The last argument can be empty or contain the pruning results (KeepP)
 plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
 ```
+
+## msr_encodedatapipeline.m
+[msr_encodedatapipeline.m](../master/msr_encodedatapipeline)
+
+
+
+
+
+
 
 ## Warranty Disclaimer and Copyright Notice
 Theo Knijnenburg
