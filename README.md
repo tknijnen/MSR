@@ -63,7 +63,7 @@ plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
 ## msr_encodedatapipeline.m
 [msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m)
 
-This script takes a signal downloaded from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Pruning). The unique mappability map is downloaded from [the Uniqueome website](http://grimmond.imb.uq.edu.au/uniqueome/downloads/). The MSR representation is output as a BED file, where each line represent a segment on a particular scale inclusing the associated SFC score.
+This script takes a signal downloaded from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Pruning). The unique mappability map is downloaded from [the Uniqueome website](http://grimmond.imb.uq.edu.au/uniqueome/downloads/). The MSR representation is output as a BED file, where each line represent a segment on a particular scale inclusing the SFC score in the last column:
 ```bash
 track name="MSR_H3K04ME3"				
 chr1	52287910	52288310	scale10	0.2736
@@ -74,6 +74,28 @@ chr1	63176410	63176910	scale11	1.3695
 chr1	79773210	79773310	scale11	1.4212
 chr1	90172910	90173010	scale11	2.9788
 ```
+
+## Matlab Compiler Runtimes
+[msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m) and [msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m)
+
+Insta
+
+
+
+
+
+This script takes a signal downloaded from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Pruning). The unique mappability map is downloaded from [the Uniqueome website](http://grimmond.imb.uq.edu.au/uniqueome/downloads/). The MSR representation is output as a BED file, where each line represent a segment on a particular scale inclusing the SFC score in the last column:
+```bash
+track name="MSR_H3K04ME3"				
+chr1	52287910	52288310	scale10	0.2736
+chr1	121996410	121996710	scale10	0.2909
+chr1	153193710	153194110	scale10	0.0079
+chr1	52820810	52821210	scale11	0.4899
+chr1	63176410	63176910	scale11	1.3695
+chr1	79773210	79773310	scale11	1.4212
+chr1	90172910	90173010	scale11	2.9788
+```
+
 
 ## Warranty Disclaimer and Copyright Notice
 Theo Knijnenburg
