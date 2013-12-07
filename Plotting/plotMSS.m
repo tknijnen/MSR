@@ -143,9 +143,6 @@ while flag==0;
     end
     N = N - 1;
 end
-X2
-Y
-N
 
 fac = 1;
 

@@ -15,7 +15,7 @@
 % You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function Enrichment = SignificantFoldChange(SegmentEnd,V1,UM,V2)
+function Enrichment = SignificantFoldChange(SegmentEnd,V1,UM,V2,pth)
 
 %% Scenarios
 BackgroundFlag = 0;
@@ -28,6 +28,7 @@ end
 if exist('V2','var');
     if ~isempty(V2);
         VersusFlag = 1;
+        %versus is in beta
     end
 end
 
@@ -35,7 +36,9 @@ end
 minLsize1 = 0;
 minLsize2 = 10;
 th = 1e-5;
-pth = 1e-6;
+if ~exist('pth','var');
+    pth = 1e-6;
+end
 maxEFC = 10;                        %only in versus mode (1=fold_change)
 foldchange_or_additive = 1;         %only in versus mode (1=fold_change)
 
@@ -73,9 +76,14 @@ if VersusFlag==0&BackgroundFlag==0;
     end
 elseif VersusFlag==0&BackgroundFlag==1;
     
+    %normalize signals to one
     MLV = max(UM);
-    V1 = V1./MLV;
     UM = UM./MLV;
+    MLV = max(V1);
+    V1 = V1./MLV;
+    %make sure that the signal is never larger than the background
+    V1 = min(V1,UM);
+    
     CL = cumsum(UM);
     CV = cumsum(V1);
     p = CV(end)/CL(end);
@@ -98,8 +106,8 @@ elseif VersusFlag==0&BackgroundFlag==1;
         
         %% Computing enrichment
 %         Enrichment{nn} = EFC(T,G1,G2,O,pth,th)';
-        Enrichment{nn} = EFC_inflatedvariance(T,G1,G2,G2r,O,pth,th);
-        
+
+          Enrichment{nn} = EFC_inflatedvariance(T,G1,G2,G2r,O,pth,th);
     end
     
 elseif VersusFlag==1&BackgroundFlag==0;

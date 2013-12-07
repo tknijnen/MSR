@@ -18,7 +18,7 @@
 function S = EFC_inflatedvariance(T,G1,G2,G2r,O,pth,th);
 
 if nargin<6;
-    th = 1e-3;
+    th = 1e-5; %for numerical stability
 end
 if nargin<5;
     pth = 1e-6;
@@ -32,11 +32,11 @@ cc = (O.^2);
 psp = (-bb + sqrt((bb.^2)-(4.*aa.*cc)))./(2.*aa);
 psn = (-bb - sqrt((bb.^2)-(4.*aa.*cc)))./(2.*aa);
 Pse = NaN*ones(size(psp));
-Cmp = ((O-(psp.*G2))./sqrt(G2.*psp.*(1-psp)));
-Cmn = ((O-(psn.*G2))./sqrt(G2.*psn.*(1-psn)));
-Ip = abs(Cmp-Zs)<th;
-In = abs(Cmn-Zs)<th;
-if any(any(In&Ip));error('hfs');end
+Cmp = ((O-(psp.*G2))./sqrt(G2r.*psp.*(1-psp)));
+Cmn = ((O-(psn.*G2))./sqrt(G2r.*psn.*(1-psn)));
+Ip = abs(Cmp-Zs)<(O*th); 
+In = abs(Cmn-Zs)<(O*th);
+psn(In&Ip)=real(psn(In&Ip)); %one solution, remove imaginary part (numerical stability)
 Pse(Ip) = psp(Ip);
 Pse(In) = psn(In);
 E = (G2.*Pse)./((G2.*G1)./T);
@@ -50,11 +50,11 @@ cc = (O.^2);
 psp = (-bb + sqrt((bb.^2)-(4.*aa.*cc)))./(2.*aa);
 psn = (-bb - sqrt((bb.^2)-(4.*aa.*cc)))./(2.*aa);
 Psd = NaN*ones(size(psp));
-Cmp = ((O-(psp.*G2))./sqrt(G2.*psp.*(1-psp)));
-Cmn = ((O-(psn.*G2))./sqrt(G2.*psn.*(1-psn)));
-Ip = abs(Cmp-Zs)<th;
-In = abs(Cmn-Zs)<th;
-if any(any(In&Ip));error('hfs');end
+Cmp = ((O-(psp.*G2))./sqrt(G2r.*psp.*(1-psp)));
+Cmn = ((O-(psn.*G2))./sqrt(G2r.*psn.*(1-psn)));
+Ip = abs(Cmp-Zs)<(O*th); 
+In = abs(Cmn-Zs)<(O*th);
+psn(In&Ip)=real(psn(In&Ip)); %one solution, remove imaginary part (numerical stability)
 Psd(Ip) = psp(Ip);
 Psd(In) = psn(In);
 D = (G2.*Psd)./((G2.*G1)./T);

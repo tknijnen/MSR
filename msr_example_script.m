@@ -24,6 +24,7 @@ if ispc
 elseif isunix
     addpath([pwd '/Unix_CONVNFFT_Folder']);rmpath([pwd '/Win_CONVNFFT_Folder']);
 end
+rmpath(genpath([pwd '/MCR/']));
 
 %% Load genomic signals
 load ExampleGenomicSignals;

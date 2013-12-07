@@ -1,0 +1,274 @@
+
+PF = 
+
+    'folder'           [1x50 char]
+    'chrsizes'         [1x64 char]
+    'signal'           [1x74 char]
+    'out'              [1x74 char]
+    'background'       [1x71 char]
+    'IS'               '10'       
+    'L'                '10'       
+    'Pth'              '1e-6'     
+    'PruneFlag'        '0'        
+    'DepletionFlag'    '1'        
+    'Eth'              '1'        
+    'T'                '1.2'      
+    'R'                '0'        
+
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr1.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr2.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrX.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr3.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr4.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr5.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr7.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr6.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr8.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr10.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr14.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr9.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr11.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr12.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr13.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr15.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr16.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr17.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr18.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr19.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrY_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrY.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrUn_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrX_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr1_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr8_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr17_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr9_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr13_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr7_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr5_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr4_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr3_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chrM.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/S_chr16_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr1.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr2.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrX.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr3.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr4.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr5.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr7.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr6.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr8.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr10.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr14.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr9.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr11.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr12.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr13.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr15.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr16.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr17.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr18.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr19.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrY_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrY.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrUn_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrX_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr1_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr8_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr17_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr9_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr13_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr7_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr5_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr4_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr3_random.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chrM.mat already exists, skipping parsing
+File /users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/tmp/UM_chr16_random.mat already exists, skipping parsing
+Running chr1...
+Running chr2...
+Running chrX...
+Running chr3...
+Running chr4...
+Running chr5...
+Running chr7...
+Running chr6...
+Running chr8...
+Running chr10...
+Running chr14...
+Running chr9...
+Running 
+Level : 2   Scale : 1   WindowSize : 9   CPUtime : 0.69232 seconds
+Level : 2   Scale : 1   Number of Kids : 237348   CPUtime : 0.38119 seconds
+Level : 2   Total Time : 2 seconds
+___
+Level : 3   Scale : 2   WindowSize : 13   CPUtime : 0.19701 seconds
+Level : 3   Scale : 2   Number of Kids : 237348   CPUtime : 0.33933 seconds
+Level : 3   Total Time : 3 seconds
+___
+Level : 4   Scale : 3   WindowSize : 19   CPUtime : 0.15688 seconds
+Level : 4   Scale : 3   Number of Kids : 237348   CPUtime : 0.39814 seconds
+Level : 4   Total Time : 3 seconds
+___
+Level : 5   Scale : 4   WindowSize : 25   CPUtime : 0.15556 seconds
+Level : 5   Scale : 4   Number of Kids : 237348   CPUtime : 0.49879 seconds
+Level : 5   Total Time : 4 seconds
+___
+Level : 6   Scale : 6   WindowSize : 35   CPUtime : 0.15738 seconds
+Level : 6   Scale : 6   Number of Kids : 237348   CPUtime : 0.69231 seconds
+Level : 6   Total Time : 5 seconds
+___
+Level : 7   Scale : 8   WindowSize : 51   CPUtime : 0.15897 seconds
+Level : 7   Scale : 8   Number of Kids : 237348   CPUtime : 0.88957 seconds
+Level : 7   Total Time : 6 seconds
+___
+Level : 8   Scale : 11   WindowSize : 71   CPUtime : 0.1621 seconds
+Level : 8   Scale : 11   Number of Kids : 232995   CPUtime : 1.212 seconds
+Level : 8   Total Time : 7 seconds
+___
+Level : 9   Scale : 16   WindowSize : 99   CPUtime : 0.16504 seconds
+Level : 9   Scale : 16   Number of Kids : 202645   CPUtime : 1.3938 seconds
+Level : 9   Total Time : 9 seconds
+___
+Level : 10   Scale : 23   WindowSize : 141   CPUtime : 0.17172 seconds
+Level : 10   Scale : 23   Number of Kids : 170340   CPUtime : 1.6428 seconds
+Level : 10   Total Time : 11 seconds
+___
+ 
+Total Time : 11 seconds
+..........Writing output for scale 1
+.Writing output for scale 2
+.Writing output for scale 3
+.Writing output for scale 4
+.Writing output for scale 5
+.Writing output for scale 6
+.Writing output for scale 7
+.Writing output for scale 8
+.Writing output for scale 9
+.Writing output for scale 10
+.Running chr11...
+Running chr12...
+Running chr13...
+Running chr15...
+Running chr16...
+Running 
+Level : 2   Scale : 1   WindowSize : 9   CPUtime : 0.15634 seconds
+Level : 2   Scale : 1   Number of Kids : 178073   CPUtime : 0.24097 seconds
+Level : 2   Total Time : 1 seconds
+___
+Level : 3   Scale : 2   WindowSize : 13   CPUtime : 0.12227 seconds
+Level : 3   Scale : 2   Number of Kids : 178073   CPUtime : 0.21158 seconds
+Level : 3   Total Time : 1 seconds
+___
+Level : 4   Scale : 3   WindowSize : 19   CPUtime : 0.12243 seconds
+Level : 4   Scale : 3   Number of Kids : 178073   CPUtime : 0.30493 seconds
+Level : 4   Total Time : 2 seconds
+___
+Level : 5   Scale : 4   WindowSize : 25   CPUtime : 0.1231 seconds
+Level : 5   Scale : 4   Number of Kids : 178073   CPUtime : 0.37955 seconds
+Level : 5   Total Time : 2 seconds
+___
+Level : 6   Scale : 6   WindowSize : 35   CPUtime : 0.12421 seconds
+Level : 6   Scale : 6   Number of Kids : 178073   CPUtime : 0.5246 seconds
+Level : 6   Total Time : 3 seconds
+___
+Level : 7   Scale : 8   WindowSize : 51   CPUtime : 0.12574 seconds
+Level : 7   Scale : 8   Number of Kids : 178073   CPUtime : 0.67174 seconds
+Level : 7   Total Time : 4 seconds
+___
+Level : 8   Scale : 11   WindowSize : 71   CPUtime : 0.12848 seconds
+Level : 8   Scale : 11   Number of Kids : 174755   CPUtime : 0.91077 seconds
+Level : 8   Total Time : 5 seconds
+___
+Level : 9   Scale : 16   WindowSize : 99   CPUtime : 0.13133 seconds
+Level : 9   Scale : 16   Number of Kids : 152501   CPUtime : 1.0544 seconds
+Level : 9   Total Time : 6 seconds
+___
+Level : 10   Scale : 23   WindowSize : 141   CPUtime : 0.13571 seconds
+Level : 10   Scale : 23   Number of Kids : 129779   CPUtime : 1.2562 seconds
+Level : 10   Total Time : 7 seconds
+___
+ 
+Total Time : 7 seconds
+..........Writing output for scale 1
+.Writing output for scale 2
+.Writing output for scale 3
+.Writing output for scale 4
+.Writing output for scale 5
+.Writing output for scale 6
+.Writing output for scale 7
+.Writing output for scale 8
+.Writing output for scale 9
+.Writing output for scale 10
+.Running chr17...
+Running chr18...
+Running chr19...
+Running 
+Level : 2   Scale : 1   WindowSize : 9   CPUtime : 0.097328 seconds
+Level : 2   Scale : 1   Number of Kids : 129605   CPUtime : 0.20749 seconds
+Level : 2   Total Time : 1 seconds
+___
+Level : 3   Scale : 2   WindowSize : 13   CPUtime : 0.097676 seconds
+Level : 3   Scale : 2   Number of Kids : 129605   CPUtime : 0.17714 seconds
+Level : 3   Total Time : 1 seconds
+___
+Level : 4   Scale : 3   WindowSize : 19   CPUtime : 0.092705 seconds
+Level : 4   Scale : 3   Number of Kids : 129605   CPUtime : 0.2565 seconds
+Level : 4   Total Time : 1 seconds
+___
+Level : 5   Scale : 4   WindowSize : 25   CPUtime : 0.088605 seconds
+Level : 5   Scale : 4   Number of Kids : 129605   CPUtime : 0.3101 seconds
+Level : 5   Total Time : 2 seconds
+___
+Level : 6   Scale : 6   WindowSize : 35   CPUtime : 0.08704 seconds
+Level : 6   Scale : 6   Number of Kids : 129605   CPUtime : 0.41099 seconds
+Level : 6   Total Time : 2 seconds
+___
+Level : 7   Scale : 8   WindowSize : 51   CPUtime : 0.084246 seconds
+Level : 7   Scale : 8   Number of Kids : 129605   CPUtime : 0.50616 seconds
+Level : 7   Total Time : 3 seconds
+___
+Level : 8   Scale : 11   WindowSize : 71   CPUtime : 0.080623 seconds
+Level : 8   Scale : 11   Number of Kids : 127129   CPUtime : 0.66514 seconds
+Level : 8   Total Time : 4 seconds
+___
+Level : 9   Scale : 16   WindowSize : 99   CPUtime : 0.082763 seconds
+Level : 9   Scale : 16   Number of Kids : 110643   CPUtime : 0.76998 seconds
+Level : 9   Total Time : 4 seconds
+___
+Level : 10   Scale : 23   WindowSize : 141   CPUtime : 0.08548 seconds
+Level : 10   Scale : 23   Number of Kids : 92844   CPUtime : 0.89594 seconds
+Level : 10   Total Time : 5 seconds
+___
+ 
+Total Time : 5 seconds
+..........Writing output for scale 1
+.Writing output for scale 2
+.Writing output for scale 3
+.Writing output for scale 4
+.Writing output for scale 5
+.Writing output for scale 6
+.Writing output for scale 7
+.Writing output for scale 8
+.Writing output for scale 9
+.Writing output for scale 10
+.Running chrY_random...
+Running chrY...
+Running chrUn_random...
+Running chrX_random...
+Running chr1_random...
+Running chr8_random...
+Running chr17_random...
+Running chr9_random...
+Running chr13_random...
+Running chr7_random...
+Running chr5_random...
+Running chr4_random...
+Running chr3_random...
+Running chrM...
+Running chr16_random...
+
+ans =
+
+     0
+

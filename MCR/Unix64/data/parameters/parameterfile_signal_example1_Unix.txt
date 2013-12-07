@@ -1,0 +1,9 @@
+signal='/users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/in/PolII_partofchr11.txt' #signal for which the MSR should be computed
+out='/users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/out/MSR_PolII_partofchr11.txt' #MSR output file columns: scale# segmentbegin segmentend SFC
+background='/users/tknijnen/matlab/MSRGIT/MCR/Unix64/data/in/UM_partofchr11.txt' #background mappability map (optional none)
+L=30 #number of scales (optional, default 25)
+Pth=1e-6 #P-value threshold (optional,default 1e-6)
+PruneFlag=-1 #Output Pruned MSR (1), complete MSR (-1) (big file) or complete MSR exluding segments with SFC=0 (optional, default 0)
+Eth=0 #Threshold for including enriched or depleted segments in the pruned MSR (optional, default 0)
+T=1 #Pruning parameter T (optional, default 1.05)
+R=0 #Pruning parameter R (optional, default 0.2)

@@ -1,0 +1,13 @@
+folder= 'U:/matlab/MSRGIT/MCR/Windows64/data/tmp/' #folder for temporary data (created if not existing) 
+chrsizes= 'U:/matlab/MSRGIT/MCR/Windows64/data/chrsizes/mm9cs.txt #tab delimited text file with chromosome sizes, can be generated with UCSC fetchChromSizes utility
+signal='U:/matlab/MSRGIT/MCR/Windows64/data/in/PolII_chr9-16-19.bedgraph' #BEDgraph file for which the MSR should be computed
+out='U:/matlab/MSRGIT/MCR/Windows64/data/out/MSR_PolII_chr9-16-19.bed' #MSR output file columns: chr segmentbegin segmentend scale# SFC (BED format)
+background='U:/matlab/MSRGIT/MCR/Windows64/data/in/UM_chr9-16-19.bedgraph' #BEDgraph file with background mappability map (optional none)
+IS=10 #resolution in basepairs (optional, default 10)
+L=10 #number of scales (optional, default 25)
+Pth=1e-6 #P-value threshold (optional,default 1e-6)
+PruneFlag=0 #Output Pruned MSR (1), complete MSR (-1) (big file) or complete MSR exluding segments with SFC=0 (optional, default 0)
+DepletionFlag=1 #When pruning, also output depleted segments (1) or not (0) (optional, default 0)
+Eth=1 #Threshold for including enriched or depleted segments in the pruned MSR (optional, default 0)
+T=1.2 #Pruning parameter T (optional, default 1.05)
+R=0 #Pruning parameter R (optional, default 0.2)
