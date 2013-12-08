@@ -92,7 +92,7 @@ versus='vs.txt'     #path to tab delimited text with numbers presenting the sign
 L=30                #number of scales (optional, default 25)
 Pth=1e-6            #P-value threshold (optional, default 1e-6)
 PruneFlag=-1        #Output Pruned MSR (1), complete MSR (-1) (big file) or complete MSR exluding segments with SFC=0 (optional, default 0)
-DepletionFlag=0;    #When pruning, also output depleted segments (1) or not (0) (optional, default 0)
+DepletionFlag=0     #When pruning, also output depleted segments (1) or not (0) (optional, default 0)
 Eth=0               #Threshold for including enriched or depleted segments in the pruned MSR (optional, default 0)
 T=1                 #Pruning parameter T (optional, default 1.05)
 R=0                 #Pruning parameter R (optional, default 0.2)
@@ -106,21 +106,56 @@ Run the executable from the command prompt like this:
 ```bash
 msr_runtime_SIGNAL U:\matlab\MSRGIT\MCR\Windows64\data\parameters\parameterfile_signal_example1_Windows.txt
 ```
-See [here](../master/MCR/Windows64/RUNEXAMPLE_SIGNAL.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Windows64/data/in)) (and similar for the Unix directory). (Unzip in.zip).
+See [here](../master/MCR/Windows64/RUNEXAMPLE_SIGNAL.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Windows64/data/in)). (Unzip in.zip).
 
 #### Unix
 The exectuable is called [msr_runtime_SIGNAL](../master/MCR/Unix64/msr_runtime_SIGNAL). 
-Use the the wrapper to run the executable like this:
-
+Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_SIGNAL.sh) to run the executable like this:
 ```bash
 ./run_msr_runtime_SIGNAL.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_signal_example1_Unix.txt
 ```
-See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81.
-
+See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_signal_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). (Unzip in.zip).
 
 
 ### Standalone for a BEDgraph file
+Computing the MSR for a Bedgraph file requires certain input data and (optional) parameters:
+```bash
+folder='/tmp/'            #path to folder for temporary data (created if not existing, required) 
+chrsizes='mm9cs.txt'      #path to tab delimited text file with chromosome sizes (required)
+signal='signal.bedgraph'  #path to BEDgraph file for which the MSR should be computed (required)
+out='out.bed'             #MSR output file in BED format. Columns: chr segmentbegin segmentend scale# SFC (required)
+background='um.bedgraph'  #path to BEDgraph file with background mappability map (optional, default none)
+versus='vs.bedgraph'      #path to BEDgraph file with signal to which the original signal is compared compared with computing the SFC (in beta, optional, default none)
+IS=10                     #resolution in basepairs (optional, default 10)
+L=30                      #number of scales (optional, default 25)
+Pth=1e-6                  #P-value threshold (optional, default 1e-6)
+PruneFlag=-1              #Output Pruned MSR (1), complete MSR (-1) (big file) or complete MSR exluding segments with SFC=0 (optional, default 0)
+DepletionFlag=0           #When pruning, also output depleted segments (1) or not (0) (optional, default 0)
+Eth=0                     #Threshold for including enriched or depleted segments in the pruned MSR (optional, default 0)
+T=1                       #Pruning parameter T (optional, default 1.05)
+R=0                       #Pruning parameter R (optional, default 0.2)
+```
+Note on the chromosome sizes file: Such a file can be easily generated with [UCSC fetchChromSizes utility]((http://hgdownload.cse.ucsc.edu/admin/exe/). MSRs will be generated for chromosomes that mentioned in the file with chromosome sizes and for which data is recorded in the BedGraph file.
+These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt). The executable is called with the parameter file as argument. 
 
+#### Windows
+The exectuable is called [msr_runtime_BED.exe](../master/MCR/Windows64/msr_runtime_BED.exe). 
+Run the executable from the command prompt like this:
+```bash
+msr_runtime_BED U:\matlab\MSRGIT\MCR\Windows64\data\parameters\parameterfile_BED_example1_Windows.txt
+```
+See [here](../master/MCR/Windows64/RUNEXAMPLE_BED.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt) for an example parameter file. Example BedGraphs can be found ([here](../master/MCR/Windows64/data/in)). (Unzip in.zip).
+
+#### Unix
+The exectuable is called [msr_runtime_BED](../master/MCR/Unix64/msr_runtime_BED). 
+Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_BED.sh) to run the executable like this:
+```bash
+./run_msr_runtime_BED.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_BED_example1_Unix.txt
+```
+See [here](../master/MCR/Unix64/RUNEXAMPLE_BED.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_BED_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). (Unzip in.zip).
+
+#### Creation of the runtime
+The executables were created by running make_mcc.m ([Windows](../master/MCR/Windows64/make_mcc.m)) ([Unix](../master/MCR/Unix64/make_mcc.m)).
 
 ## Warranty Disclaimer and Copyright Notice
 Theo Knijnenburg
