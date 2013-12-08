@@ -63,7 +63,7 @@ plotMSS(x,Lmin,Lmax,V1,Enrichment2,KM,SegmentEnd,[]);
 ## msr_encodedatapipeline.m
 [msr_encodedatapipeline.m](../master/msr_encodedatapipeline.m)
 
-This script takes a signal downloaded from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Data/ENCODE). The unique mappability map is downloaded from [the Uniqueome website](http://grimmond.imb.uq.edu.au/uniqueome/downloads/). The MSR representation is output as a BED file, where each line represent a segment on a particular scale with the SFC score in the last column:
+This script takes a signal downloaded from ENCODE (in WIG format) and creates the MSR. To use the ENCODE signal unzip the WIG file in the [ENCODE data folder](../master/Data/ENCODE). The unique mappability map used in this pipeline is downloaded from [the Uniqueome website](http://grimmond.imb.uq.edu.au/uniqueome/downloads/). The MSR representation is output as a BED file, where each line represent a segment on a particular scale with the SFC score in the last column:
 ```bash
 track name="MSR_H3K04ME3"				
 chr1	52287910	52288310	scale10	0.2736
