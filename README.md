@@ -7,7 +7,7 @@ There are two main components to create the MSR. The third component is optional
 2. Computating of the SFC
 3. Pruning to detect relevant yet non-redundant segment in the MSR
 
-Below we describe these components using the Matlab msr_example_script.m. Additionally, we provide a script to create MSRs from ENCODE data and we provide Matlab Compiler Runtimes for Unix and Windows that enable users to run the MSR application without installing Matlab. Note that depending on the size of the data and parameters settings computing the MSR can be computationally heavy.
+Below we describe these components using the Matlab msr_example_script.m. Additionally, we provide a script to create MSRs from ENCODE data and we provide Matlab Compiler Runtimes for Unix and Windows that enable users to run the MSR application without installing Matlab. Note that depending on the size of the data and parameters settings computing the MSR can be demanding in terms of memory and CPU time.
 
 
 ## msr_example_script.m
