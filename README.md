@@ -80,7 +80,46 @@ For [Windows 64 bit](../master/MCR/Windows64) and [Unix 64 bit](../master/MCR/Un
 
 Here, we provide standalone executables for Unix (64bit) and Windows (64bit) that enable users to run the MSR  application without installing Matlab. To use these runtime components, first download the Matlab Compiler Runtime Release 2013a (8.1) from [the Matlab website](http://www.mathworks.com/products/compiler/mcr/). Install the MCR and set paths as described [here](http://www.mathworks.com/help/compiler/working-with-the-mcr.html).
 
-Copy the appropriate folder ([this one for Windows](../master/MCR/Windows64),[this one for Unix](../master/MCR/Windows64)) to a local directory or server. There are executables to create a MSR for an individual signal as well as for a BedGraph file. (See [here](http://genome.ucsc.edu/goldenPath/help/bedgraph.html) for information about this format. Other genomic signal formats, such as WIG can easily be transformed into a BedGraph using the binary utilities available via the [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/admin/exe/).) 
+Copy the appropriate folder ([this one for Windows](../master/MCR/Windows64),[this one for Unix](../master/MCR/Windows64)) to a local directory or server. There are executables to create a MSR for an individual signal as well as for a BedGraph file. (See [here](http://genome.ucsc.edu/goldenPath/help/bedgraph.html) for information about this format. Other genomic signal formats, such as WIG can easily be transformed into a BedGraph using the binary utilities available via the [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/admin/exe/).) The paths to input and output data as well as parameter settings should be stored in a parameter file, which forms the input argument to the standalone executable. Below we provide a detailed description and examples.
+
+### Standalone for an individual signal
+Computing the MSR for a signal requires certain input data and (optional) parameters:
+```bash
+signal='signal.txt' #path to tab delimited text with numbers presenting the signal for which the MSR has to be computed. (required)
+out='msr.txt'       #path to MSR output file. Columns: scale# segmentbegin segmentend SFC. (required)
+background='bg.txt' #path to file with background mappability map (optional, default none)
+versus='vs.txt'     #path to tab delimited text with numbers presenting the signal to which the original signal is compared with computing the SFC (in beta, optional, default none)
+L=30                #number of scales (optional, default 25)
+Pth=1e-6            #P-value threshold (optional, default 1e-6)
+PruneFlag=-1        #Output Pruned MSR (1), complete MSR (-1) (big file) or complete MSR exluding segments with SFC=0 (optional, default 0)
+DepletionFlag=0;    #When pruning, also output depleted segments (1) or not (0) (optional, default 0)
+Eth=0               #Threshold for including enriched or depleted segments in the pruned MSR (optional, default 0)
+T=1                 #Pruning parameter T (optional, default 1.05)
+R=0                 #Pruning parameter R (optional, default 0.2)
+```
+These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt). The executable is called with the parameter file as argument. 
+
+
+#### Windows
+The exectuable is called [msr_runtime_SIGNAL.exe](../master/MCR/Windows64/msr_runtime_SIGNAL.exe). 
+Run the executable from the command prompt like this:
+```bash
+msr_runtime_SIGNAL U:\matlab\MSRGIT\MCR\Windows64\data\parameters\parameterfile_signal_example1_Windows.txt
+```
+See [here](../master/MCR/Windows64/RUNEXAMPLE_SIGNAL.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Windows64/data/in)) (and similar for the Unix directory). (Unzip in.zip).
+
+#### Unix
+The exectuable is called [msr_runtime_SIGNAL](../master/MCR/Unix64/msr_runtime_SIGNAL). 
+Use the the wrapper to run the executable like this:
+
+```bash
+./run_msr_runtime_SIGNAL.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_signal_example1_Unix.txt
+```
+See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81.
+
+
+
+### Standalone for a BEDgraph file
 
 
 ## Warranty Disclaimer and Copyright Notice
