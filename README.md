@@ -80,7 +80,7 @@ For [Windows 64 bit](../master/MCR/Windows64) and [Unix 64 bit](../master/MCR/Un
 
 Here, we provide standalone executables for Unix (64bit) and Windows (64bit) that enable users to run the MSR  application without installing Matlab. To use these runtime components, first download the Matlab Compiler Runtime Release 2013a (8.1) from [the Matlab website](http://www.mathworks.com/products/compiler/mcr/). Install the MCR and set paths as described [here](http://www.mathworks.com/help/compiler/working-with-the-mcr.html).
 
-Copy the appropriate folder ([this one for Windows](../master/MCR/Windows64),[this one for Unix](../master/MCR/Windows64)) to a local directory or server. There are executables to create a MSR for an individual signal as well as for a BedGraph file. (See [here](http://genome.ucsc.edu/goldenPath/help/bedgraph.html) for information about this format. Other genomic signal formats, such as WIG can easily be transformed into a BedGraph using the binary utilities available via the [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/admin/exe/).) The paths to input and output data as well as parameter settings should be stored in a parameter file, which forms the input argument to the standalone executable. Below we provide a detailed description and examples.
+Copy the appropriate folder ([this one for Windows](../master/MCR/Windows64),[this one for Unix](../master/MCR/Unix64)) to a local directory or server. There are executables to create a MSR for an individual signal as well as for a BedGraph file. (See [here](http://genome.ucsc.edu/goldenPath/help/bedgraph.html) for information about this format. Other genomic signal formats, such as WIG can easily be transformed into a BedGraph using the binary utilities available via the [UCSC Genome Browser](http://hgdownload.cse.ucsc.edu/admin/exe/).) The paths to input and output data as well as parameter settings should be stored in a parameter file, which forms the input argument to the standalone executable. Below we provide a detailed description and examples.
 
 ### Standalone for an individual signal
 Computing the MSR for a signal requires certain input data and (optional) parameters:
@@ -97,7 +97,7 @@ Eth=0               #Threshold for including enriched or depleted segments in th
 T=1                 #Pruning parameter T (optional, default 1.05)
 R=0                 #Pruning parameter R (optional, default 0.2)
 ```
-These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt). The executable is called with the parameter file as argument. 
+These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt). The executable is called with the parameter file as an argument. 
 
 
 #### Windows
@@ -135,8 +135,9 @@ Eth=0                     #Threshold for including enriched or depleted segments
 T=1                       #Pruning parameter T (optional, default 1.05)
 R=0                       #Pruning parameter R (optional, default 0.2)
 ```
-Note on the chromosome sizes file: Such a file can be easily generated with [UCSC fetchChromSizes utility]((http://hgdownload.cse.ucsc.edu/admin/exe/). MSRs will be generated for chromosomes that mentioned in the file with chromosome sizes and for which data is recorded in the BedGraph file.
-These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt). The executable is called with the parameter file as argument. 
+Note on the chromosome sizes file: Such a file can be easily generated with [UCSC fetchChromSizes utility](http://hgdownload.cse.ucsc.edu/admin/exe/). MSRs will be generated for chromosomes that are mentioned in the file with chromosome sizes and for which data is recorded in the BedGraph file. [Here](../master/MCR/Windows64/data/chrsizes/mm9cs.txt) is an example chromosome size file.
+
+The parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt). The executable is called with the parameter file as an argument. 
 
 #### Windows
 The exectuable is called [msr_runtime_BED.exe](../master/MCR/Windows64/msr_runtime_BED.exe). 
