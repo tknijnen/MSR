@@ -116,7 +116,7 @@ Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_SIGNAL.sh) to run the
 ```bash
 ./run_msr_runtime_SIGNAL.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_signal_example1_Unix.txt
 ```
-Specifically, the exectuable has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it. 
+Specifically, the wrapper shell sript has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the wrapper shell sript from the directory containing the wrapper shell sript. Alternatively, make sure the wrapper shell sript is part of your Unix path, or specify the path to the wrapper shell sript when calling it. 
 See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_signal_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 ### Standalone for a BEDgraph file
@@ -157,7 +157,7 @@ Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_BED.sh) to run the ex
 ```bash
 ./run_msr_runtime_BED.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_BED_example1_Unix.txt
 ```
-Specifically, the exectuable has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it.
+Specifically, the wrapper shell sript has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the wrapper shell sript from the directory containing the wrapper shell sript. Alternatively, make sure the wrapper shell sript is part of your Unix path, or specify the path to the wrapper shell sript when calling it. 
 See [here](../master/MCR/Unix64/RUNEXAMPLE_BED.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_BED_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 #### Creation of the runtime
