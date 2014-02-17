@@ -116,7 +116,7 @@ Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_SIGNAL.sh) to run the
 ```bash
 ./run_msr_runtime_SIGNAL.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_signal_example1_Unix.txt
 ```
-Specifically, the exectuable has one argument, which is the path to the parameter file. Make sure that the path to the parameter file is correct. It will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it. 
+Specifically, the exectuable has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it. 
 See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_signal_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 ### Standalone for a BEDgraph file
@@ -139,7 +139,8 @@ R=0                       #Pruning parameter R (optional, default 0.2)
 ```
 Note on the chromosome sizes file: Such a file can be easily generated with [UCSC fetchChromSizes utility](http://hgdownload.cse.ucsc.edu/admin/exe/). MSRs will be generated for chromosomes that are mentioned in the file with chromosome sizes and for which data is recorded in the BedGraph file. [Here](../master/MCR/Windows64/data/chrsizes/mm9cs.txt) is an example chromosome size file.
 
-The parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt). The executable is called with the parameter file as an argument. 
+The parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt). It is very important to make sure that the paths to the input data, i.e. the signals, chromosome sizes and background mappability map, as well as the output folder and temporary folder, exist and are correct. Make sure you change the paths in the parameter file to reflect the actual locations of these data on your local or network drive. 
+The executable is called with the parameter file as an argument as explained below. 
 
 #### Windows
 The exectuable is called [msr_runtime_BED.exe](../master/MCR/Windows64/msr_runtime_BED.exe). 
@@ -147,7 +148,8 @@ Run the executable from the command prompt like this:
 ```bash
 msr_runtime_BED U:\matlab\MSRGIT\MCR\Windows64\data\parameters\parameterfile_BED_example1_Windows.txt
 ```
-See [here](../master/MCR/Windows64/RUNEXAMPLE_BED.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt) for an example parameter file. Example BedGraphs can be found ([here](../master/MCR/Windows64/data/in)). (Unzip in.zip).
+Specifically, the exectuable has one argument, which is the path to the parameter file. Make sure that the path to the parameter file is correct. It will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Windows path, or specify the path to the exectable when calling it.
+See [here](../master/MCR/Windows64/RUNEXAMPLE_BED.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_BED_example1_Windows.txt) for an example parameter file. Example BedGraphs can be found ([here](../master/MCR/Windows64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 #### Unix
 The exectuable is called [msr_runtime_BED](../master/MCR/Unix64/msr_runtime_BED). 
@@ -155,7 +157,8 @@ Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_BED.sh) to run the ex
 ```bash
 ./run_msr_runtime_BED.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_BED_example1_Unix.txt
 ```
-See [here](../master/MCR/Unix64/RUNEXAMPLE_BED.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_BED_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). (Unzip in.zip).
+Specifically, the exectuable has two arguments. First, the path to where the Matlab Compiler Runtimes is installed. Second, the path to the parameter file. Make sure that these two paths are correct. They will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it.
+See [here](../master/MCR/Unix64/RUNEXAMPLE_BED.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_BED_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 #### Creation of the runtime
 The executables were created by running make_mcc.m ([Windows](../master/MCR/Windows64/make_mcc.m)) ([Unix](../master/MCR/Unix64/make_mcc.m)).
