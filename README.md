@@ -97,8 +97,8 @@ Eth=0               #Threshold for including enriched or depleted segments in th
 T=1                 #Pruning parameter T (optional, default 1.05)
 R=0                 #Pruning parameter R (optional, default 0.2)
 ```
-These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt). The executable is called with the parameter file as an argument. 
-
+These parameters are stored in a parameter file, such as [this](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt). It is very important to make sure that the paths to the input data, i.e. the signals and background mappability map, as well as the output folder, exist and are correct. Make sure you change the paths in the parameter file to reflect the actual locations of these data on your local or network drive. 
+The executable is called with the parameter file as an argument as explained below.
 
 #### Windows
 The exectuable is called [msr_runtime_SIGNAL.exe](../master/MCR/Windows64/msr_runtime_SIGNAL.exe). 
@@ -106,7 +106,9 @@ Run the executable from the command prompt like this:
 ```bash
 msr_runtime_SIGNAL U:\matlab\MSRGIT\MCR\Windows64\data\parameters\parameterfile_signal_example1_Windows.txt
 ```
-See [here](../master/MCR/Windows64/RUNEXAMPLE_SIGNAL.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Windows64/data/in)). (Unzip in.zip).
+Specifically, the exectuable has one argument, which is the path to the parameter file. Make sure that the path to the parameter file is correct. It will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Windows path, or specify the path to the exectable when calling it. 
+See [here](../master/MCR/Windows64/RUNEXAMPLE_SIGNAL.txt) for the example file. See [here](../master/MCR/Windows64/data/parameters/parameterfile_signal_example1_Windows.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Windows64/data/in)). Make sure you unzip in.zip to use these example signals.
+
 
 #### Unix
 The exectuable is called [msr_runtime_SIGNAL](../master/MCR/Unix64/msr_runtime_SIGNAL). 
@@ -114,8 +116,8 @@ Use the the [wrapper](../master/MCR/Unix64/run_msr_runtime_SIGNAL.sh) to run the
 ```bash
 ./run_msr_runtime_SIGNAL.sh /titan/cancerregulome9/workspaces/mcr/mcr/v81/ ./data/parameters/parameterfile_signal_example1_Unix.txt
 ```
-See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_signal_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). (Unzip in.zip).
-
+Specifically, the exectuable has one argument, which is the path to the parameter file. Make sure that the path to the parameter file is correct. It will be different from the example above. Run the executable from the directory containing the executable. Alternatively, make sure the executable is part of your Unix path, or specify the path to the exectable when calling it. 
+See [here](../master/MCR/Unix64/RUNEXAMPLE_SIGNAL.txt) for the example file. Note that in this case the parameter file is the second argument and the first argument is the path to the MCR v81. See [here](../master/MCR/Unix64/data/parameters/parameterfile_signal_example1_Unix.txt) for an example parameter file. Example signals can be found ([here](../master/MCR/Unix64/data/in)). Make sure you unzip in.zip to use these example signals.
 
 ### Standalone for a BEDgraph file
 Computing the MSR for a Bedgraph file requires certain input data and (optional) parameters:
