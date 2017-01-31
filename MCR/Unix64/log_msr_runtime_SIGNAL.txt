@@ -12,127 +12,122 @@ PF =
     'R'             '0'        
 
 Running 
-Level : 2   Scale : 1   WindowSize : 9   CPUtime : 0.31451 seconds
-Level : 2   Scale : 1   Number of Kids : 27929   CPUtime : 0.040809 seconds
+Level : 2   Scale : 1   WindowSize : 9   CPUtime : 0.58525 seconds
+Level : 2   Scale : 1   Number of Kids : 27929   CPUtime : 0.0425 seconds
 Level : 2   Total Time : 1 seconds
 ___
-Level : 3   Scale : 2   WindowSize : 13   CPUtime : 0.016888 seconds
-Level : 3   Scale : 2   Number of Kids : 27929   CPUtime : 0.039259 seconds
+Level : 3   Scale : 2   WindowSize : 13   CPUtime : 0.019217 seconds
+Level : 3   Scale : 2   Number of Kids : 27929   CPUtime : 0.038605 seconds
 Level : 3   Total Time : 1 seconds
 ___
-Level : 4   Scale : 3   WindowSize : 19   CPUtime : 0.016156 seconds
-Level : 4   Scale : 3   Number of Kids : 26595   CPUtime : 0.048006 seconds
+Level : 4   Scale : 3   WindowSize : 19   CPUtime : 0.019168 seconds
+Level : 4   Scale : 3   Number of Kids : 26595   CPUtime : 0.050526 seconds
 Level : 4   Total Time : 1 seconds
 ___
-Level : 5   Scale : 4   WindowSize : 25   CPUtime : 0.016578 seconds
-Level : 5   Scale : 4   Number of Kids : 25933   CPUtime : 0.059539 seconds
+Level : 5   Scale : 4   WindowSize : 25   CPUtime : 0.013753 seconds
+Level : 5   Scale : 4   Number of Kids : 25933   CPUtime : 0.057689 seconds
 Level : 5   Total Time : 1 seconds
 ___
-Level : 6   Scale : 6   WindowSize : 35   CPUtime : 0.014954 seconds
-Level : 6   Scale : 6   Number of Kids : 24457   CPUtime : 0.076155 seconds
+Level : 6   Scale : 6   WindowSize : 35   CPUtime : 0.019348 seconds
+Level : 6   Scale : 6   Number of Kids : 24457   CPUtime : 0.078781 seconds
 Level : 6   Total Time : 1 seconds
 ___
-Level : 7   Scale : 8   WindowSize : 51   CPUtime : 0.015067 seconds
-Level : 7   Scale : 8   Number of Kids : 23487   CPUtime : 0.095846 seconds
+Level : 7   Scale : 8   WindowSize : 51   CPUtime : 0.01408 seconds
+Level : 7   Scale : 8   Number of Kids : 23487   CPUtime : 0.09399 seconds
 Level : 7   Total Time : 1 seconds
 ___
-Level : 8   Scale : 11   WindowSize : 71   CPUtime : 0.015475 seconds
-Level : 8   Scale : 11   Number of Kids : 21152   CPUtime : 0.12321 seconds
+Level : 8   Scale : 11   WindowSize : 71   CPUtime : 0.019831 seconds
+Level : 8   Scale : 11   Number of Kids : 21152   CPUtime : 0.11207 seconds
 Level : 8   Total Time : 1 seconds
 ___
-Level : 9   Scale : 16   WindowSize : 99   CPUtime : 0.014922 seconds
-Level : 9   Scale : 16   Number of Kids : 18995   CPUtime : 0.13825 seconds
+Level : 9   Scale : 16   WindowSize : 99   CPUtime : 0.009009 seconds
+Level : 9   Scale : 16   Number of Kids : 18995   CPUtime : 0.07965 seconds
 Level : 9   Total Time : 1 seconds
 ___
-Level : 10   Scale : 23   WindowSize : 141   CPUtime : 0.015587 seconds
-Level : 10   Scale : 23   Number of Kids : 13492   CPUtime : 0.14229 seconds
-Level : 10   Total Time : 1 seconds
+Level : 10   Scale : 23   WindowSize : 141   CPUtime : 0.009488 seconds
+Level : 10   Scale : 23   Number of Kids : 13492   CPUtime : 0.078744 seconds
+Level : 10   Total Time : 2 seconds
 ___
-Level : 11   Scale : 32   WindowSize : 199   CPUtime : 0.016062 seconds
-Level : 11   Scale : 32   Number of Kids : 11031   CPUtime : 0.61649 seconds
+Level : 11   Scale : 32   WindowSize : 199   CPUtime : 0.013065 seconds
+Level : 11   Scale : 32   Number of Kids : 11031   CPUtime : 0.26551 seconds
 Level : 11   Total Time : 2 seconds
 ___
-Level : 12   Scale : 45   WindowSize : 281   CPUtime : 0.0151 seconds
-Level : 12   Scale : 45   Number of Kids : 8664   CPUtime : 0.34333 seconds
+Level : 12   Scale : 45   WindowSize : 281   CPUtime : 0.010538 seconds
+Level : 12   Scale : 45   Number of Kids : 8664   CPUtime : 0.21659 seconds
 Level : 12   Total Time : 2 seconds
 ___
-Level : 13   Scale : 64   WindowSize : 397   CPUtime : 0.015614 seconds
-Level : 13   Scale : 64   Number of Kids : 6942   CPUtime : 0.28992 seconds
-Level : 13   Total Time : 3 seconds
+Level : 13   Scale : 64   WindowSize : 397   CPUtime : 0.014503 seconds
+Level : 13   Scale : 64   Number of Kids : 6942   CPUtime : 0.19062 seconds
+Level : 13   Total Time : 2 seconds
 ___
-Level : 14   Scale : 91   WindowSize : 561   CPUtime : 0.01695 seconds
-Level : 14   Scale : 91   Number of Kids : 5675   CPUtime : 0.25549 seconds
-Level : 14   Total Time : 3 seconds
+Level : 14   Scale : 91   WindowSize : 561   CPUtime : 0.013574 seconds
+Level : 14   Scale : 91   Number of Kids : 5675   CPUtime : 0.16601 seconds
+Level : 14   Total Time : 2 seconds
 ___
-Level : 15   Scale : 128   WindowSize : 793   CPUtime : 0.02235 seconds
-Level : 15   Scale : 128   Number of Kids : 4685   CPUtime : 0.23175 seconds
+Level : 15   Scale : 128   WindowSize : 793   CPUtime : 0.018002 seconds
+Level : 15   Scale : 128   Number of Kids : 4685   CPUtime : 0.15352 seconds
 Level : 15   Total Time : 3 seconds
 ___
-Level : 16   Scale : 181   WindowSize : 1119   CPUtime : 0.023073 seconds
-Level : 16   Scale : 181   Number of Kids : 3889   CPUtime : 0.21001 seconds
-Level : 16   Total Time : 4 seconds
+Level : 16   Scale : 181   WindowSize : 1119   CPUtime : 0.017591 seconds
+Level : 16   Scale : 181   Number of Kids : 3889   CPUtime : 0.13908 seconds
+Level : 16   Total Time : 3 seconds
 ___
-Level : 17   Scale : 256   WindowSize : 1583   CPUtime : 0.30691 seconds
-Level : 17   Scale : 256   Number of Kids : 3124   CPUtime : 0.19189 seconds
-Level : 17   Total Time : 4 seconds
+Level : 17   Scale : 256   WindowSize : 1583   CPUtime : 0.32609 seconds
+Level : 17   Scale : 256   Number of Kids : 3124   CPUtime : 0.26953 seconds
+Level : 17   Total Time : 3 seconds
 ___
-Level : 18   Scale : 362   WindowSize : 2239   CPUtime : 0.16143 seconds
-Level : 18   Scale : 362   Number of Kids : 2515   CPUtime : 0.26 seconds
+Level : 18   Scale : 362   WindowSize : 2239   CPUtime : 0.16546 seconds
+Level : 18   Scale : 362   Number of Kids : 2515   CPUtime : 0.25021 seconds
 Level : 18   Total Time : 4 seconds
 ___
-Level : 19   Scale : 512   WindowSize : 3165   CPUtime : 0.15986 seconds
-Level : 19   Scale : 512   Number of Kids : 1974   CPUtime : 0.1691 seconds
-Level : 19   Total Time : 5 seconds
+Level : 19   Scale : 512   WindowSize : 3165   CPUtime : 0.15919 seconds
+Level : 19   Scale : 512   Number of Kids : 1974   CPUtime : 0.21995 seconds
+Level : 19   Total Time : 4 seconds
 ___
-Level : 20   Scale : 724   WindowSize : 4477   CPUtime : 0.13316 seconds
-Level : 20   Scale : 724   Number of Kids : 1498   CPUtime : 0.15889 seconds
+Level : 20   Scale : 724   WindowSize : 4477   CPUtime : 0.15445 seconds
+Level : 20   Scale : 724   Number of Kids : 1498   CPUtime : 0.22361 seconds
 Level : 20   Total Time : 5 seconds
 ___
-Level : 21   Scale : 1024   WindowSize : 6329   CPUtime : 0.13159 seconds
-Level : 21   Scale : 1024   Number of Kids : 1110   CPUtime : 0.14965 seconds
+Level : 21   Scale : 1024   WindowSize : 6329   CPUtime : 0.16691 seconds
+Level : 21   Scale : 1024   Number of Kids : 1110   CPUtime : 0.20471 seconds
 Level : 21   Total Time : 5 seconds
 ___
-Level : 22   Scale : 1448   WindowSize : 8951   CPUtime : 0.1337 seconds
-Level : 22   Scale : 1448   Number of Kids : 826   CPUtime : 0.14617 seconds
-Level : 22   Total Time : 6 seconds
+Level : 22   Scale : 1448   WindowSize : 8951   CPUtime : 0.15485 seconds
+Level : 22   Scale : 1448   Number of Kids : 826   CPUtime : 0.18702 seconds
+Level : 22   Total Time : 5 seconds
 ___
-Level : 23   Scale : 2048   WindowSize : 12659   CPUtime : 0.13086 seconds
-Level : 23   Scale : 2048   Number of Kids : 582   CPUtime : 0.1381 seconds
+Level : 23   Scale : 2048   WindowSize : 12659   CPUtime : 0.15002 seconds
+Level : 23   Scale : 2048   Number of Kids : 582   CPUtime : 0.16358 seconds
 Level : 23   Total Time : 6 seconds
 ___
-Level : 24   Scale : 2896   WindowSize : 17901   CPUtime : 0.1327 seconds
-Level : 24   Scale : 2896   Number of Kids : 419   CPUtime : 0.14146 seconds
+Level : 24   Scale : 2896   WindowSize : 17901   CPUtime : 0.14635 seconds
+Level : 24   Scale : 2896   Number of Kids : 419   CPUtime : 0.16092 seconds
 Level : 24   Total Time : 6 seconds
 ___
-Level : 25   Scale : 4096   WindowSize : 25317   CPUtime : 0.13024 seconds
-Level : 25   Scale : 4096   Number of Kids : 301   CPUtime : 0.17042 seconds
-Level : 25   Total Time : 7 seconds
+Level : 25   Scale : 4096   WindowSize : 25317   CPUtime : 0.13939 seconds
+Level : 25   Scale : 4096   Number of Kids : 301   CPUtime : 0.17105 seconds
+Level : 25   Total Time : 6 seconds
 ___
-Level : 26   Scale : 5793   WindowSize : 35803   CPUtime : 0.13152 seconds
-Level : 26   Scale : 5793   Number of Kids : 206   CPUtime : 0.1326 seconds
+Level : 26   Scale : 5793   WindowSize : 35803   CPUtime : 0.13694 seconds
+Level : 26   Scale : 5793   Number of Kids : 206   CPUtime : 0.15451 seconds
 Level : 26   Total Time : 7 seconds
 ___
-Level : 27   Scale : 8192   WindowSize : 50631   CPUtime : 0.28614 seconds
-Level : 27   Scale : 8192   Number of Kids : 143   CPUtime : 0.19167 seconds
+Level : 27   Scale : 8192   WindowSize : 50631   CPUtime : 0.31203 seconds
+Level : 27   Scale : 8192   Number of Kids : 143   CPUtime : 0.12807 seconds
 Level : 27   Total Time : 7 seconds
 ___
-Level : 28   Scale : 11585   WindowSize : 71603   CPUtime : 0.26862 seconds
-Level : 28   Scale : 11585   Number of Kids : 102   CPUtime : 0.17866 seconds
-Level : 28   Total Time : 8 seconds
+Level : 28   Scale : 11585   WindowSize : 71603   CPUtime : 0.23051 seconds
+Level : 28   Scale : 11585   Number of Kids : 102   CPUtime : 0.13914 seconds
+Level : 28   Total Time : 7 seconds
 ___
-Level : 29   Scale : 16384   WindowSize : 101261   CPUtime : 0.26542 seconds
-Level : 29   Scale : 16384   Number of Kids : 80   CPUtime : 0.21423 seconds
+Level : 29   Scale : 16384   WindowSize : 101261   CPUtime : 0.22174 seconds
+Level : 29   Scale : 16384   Number of Kids : 80   CPUtime : 0.13343 seconds
 Level : 29   Total Time : 8 seconds
 ___
-Level : 30   Scale : 23170   WindowSize : 143205   CPUtime : 0.26525 seconds
-Level : 30   Scale : 23170   Number of Kids : 54   CPUtime : 0.17258 seconds
-Level : 30   Total Time : 9 seconds
+Level : 30   Scale : 23170   WindowSize : 143205   CPUtime : 0.2554 seconds
+Level : 30   Scale : 23170   Number of Kids : 54   CPUtime : 0.20421 seconds
+Level : 30   Total Time : 8 seconds
 ___
  
-Total Time : 9 seconds
-
-p =
-
-    0.0040
-
+Total Time : 8 seconds
 ............................................................

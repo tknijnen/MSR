@@ -15,16 +15,16 @@
 % You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% function_name = 'msr_runtime_SIGNAL.m';
-% fid = fopen([pwd '/make_mcc.sh'],'w+');
-% fprintf(fid,['/tools/matlab_R2013a/bin/mcc -R ''-logfile,log_msr_runtime_SIGNAL.txt'' -m -I ' pwd '/ -d ' pwd ' ' function_name ' -a ./mfiles \n']);
-% fclose(fid);
-% [status,result] = unix(['chmod 777 -f ' pwd '/make_mcc.sh']);
-% [status,result] = unix([pwd '/make_mcc.sh']);
-
-function_name = 'msr_runtime_BED.m';
+function_name = 'msr_runtime_SIGNAL.m';
 fid = fopen([pwd '/make_mcc.sh'],'w+');
-fprintf(fid,['/tools/matlab_R2013a/bin/mcc -R ''-logfile,log_msr_runtime_BED.txt'' -m -I ' pwd '/ -d ' pwd ' ' function_name ' -a ./mfiles \n']);
+fprintf(fid,['/tools/matlab_R2013a/bin/mcc -R ''-logfile,log_msr_runtime_SIGNAL.txt'' -m -I ' pwd '/ -d ' pwd ' ' function_name ' -a ./mfiles \n']);
 fclose(fid);
-[status,result] = unix(['chmod 777 -f ' pwd '/make_mcc.sh'])
-[status,result] = unix([pwd '/make_mcc.sh'])
+[status,result] = unix(['chmod 777 -f ' pwd '/make_mcc.sh']);
+[status,result] = unix([pwd '/make_mcc.sh']);
+
+% function_name = 'msr_runtime_BED.m';
+% fid = fopen([pwd '/make_mcc.sh'],'w+');
+% fprintf(fid,['/tools/matlab_R2013a/bin/mcc -R ''-logfile,log_msr_runtime_BED.txt'' -m -I ' pwd '/ -d ' pwd ' ' function_name ' -a ./mfiles \n']);
+% fclose(fid);
+% [status,result] = unix(['chmod 777 -f ' pwd '/make_mcc.sh'])
+% [status,result] = unix([pwd '/make_mcc.sh'])

@@ -176,7 +176,7 @@ for nn = 1:L;
     else
         pos = find(Enrichment{nn}~=0);
     end
-    dlmwrite(OF,[nn*ones(length(pos),1) Segments(:,pos)' Enrichment{nn}(pos)],'delimiter','\t','-append');
+    dlmwrite(OF,[nn*ones(length(pos),1) Segments(:,pos)' Enrichment{nn}(pos)],'delimiter','\t','precision','%12.6f','-append');
 end
 
 
